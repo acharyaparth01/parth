@@ -1,0 +1,7 @@
+select e.emp_name,e.salary,s.grade from empl e join salgrade s on e.salary between s.losal and s.hisal;
+
+EMP_NAME       SALARY      GRADE                                                
+---------- ---------- ----------                                                
+aasha            6000          5                                                
+
+SQL> 
