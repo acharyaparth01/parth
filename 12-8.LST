@@ -1,5 +1,3 @@
-abs(-55) from dual;
-SP2-0734: unknown command beginning "abs(-55) f..." - rest of line ignored.
 SQL> select abs(-55) from dual;
 
   ABS(-55)                                                                      
@@ -24,11 +22,6 @@ SQL> select tan(5) from dual;
 ----------                                                                      
  -3.380515                                                                      
 
-SQL> select * from BONUS
-  2  ;
-
-no rows selected
-
 SQL> select * from SALGRADE        ;
 
      GRADE      LOSAL      HISAL                                                
@@ -44,13 +37,6 @@ SQL> select sum(GRADE) from SALGRADE;
 SUM(GRADE)                                                                      
 ----------                                                                      
         15                                                                      
-
-SQL> select avg((GRADE) from SALGRADE;
-select avg((GRADE) from SALGRADE
-                   *
-ERROR at line 1:
-ORA-00907: missing right parenthesis 
-
 
 SQL> select avg(GRADE) from SALGRADE;
 
@@ -93,13 +79,6 @@ SQL> select power(5,2) from dual;
 POWER(5,2)                                                                      
 ----------                                                                      
         25                                                                      
-
-SQL> select log(101000) from dual;
-select log(101000) from dual
-       *
-ERROR at line 1:
-ORA-00909: invalid number of arguments 
-
 
 SQL>  select log(10,1000) from dual;
 
