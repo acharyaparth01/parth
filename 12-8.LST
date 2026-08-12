@@ -1,0 +1,146 @@
+abs(-55) from dual;
+SP2-0734: unknown command beginning "abs(-55) f..." - rest of line ignored.
+SQL> select abs(-55) from dual;
+
+  ABS(-55)                                                                      
+----------                                                                      
+        55                                                                      
+
+SQL> select cos(60) from dual;
+
+   COS(60)                                                                      
+----------                                                                      
+-.95241298                                                                      
+
+SQL> select sin(1) from dual;
+
+    SIN(1)                                                                      
+----------                                                                      
+.841470985                                                                      
+
+SQL> select tan(5) from dual;
+
+    TAN(5)                                                                      
+----------                                                                      
+ -3.380515                                                                      
+
+SQL> select * from BONUS
+  2  ;
+
+no rows selected
+
+SQL> select * from SALGRADE        ;
+
+     GRADE      LOSAL      HISAL                                                
+---------- ---------- ----------                                                
+         1        700       1200                                                
+         2       1201       1400                                                
+         3       1401       2000                                                
+         4       2001       3000                                                
+         5       3001       9999                                                
+
+SQL> select sum(GRADE) from SALGRADE;
+
+SUM(GRADE)                                                                      
+----------                                                                      
+        15                                                                      
+
+SQL> select avg((GRADE) from SALGRADE;
+select avg((GRADE) from SALGRADE
+                   *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select avg(GRADE) from SALGRADE;
+
+AVG(GRADE)                                                                      
+----------                                                                      
+         3                                                                      
+
+SQL> select max(HISAL) from SALGRADE;
+
+MAX(HISAL)                                                                      
+----------                                                                      
+      9999                                                                      
+
+SQL> select min(HISAL) from SALGRADE;
+
+MIN(HISAL)                                                                      
+----------                                                                      
+      1200                                                                      
+
+SQL> select ceil(3.244) from dual;
+
+CEIL(3.244)                                                                     
+-----------                                                                     
+          4                                                                     
+
+SQL> select floor(3.545) from dual;
+
+FLOOR(3.545)                                                                    
+------------                                                                    
+           3                                                                    
+
+SQL> select mod (5,1) from dual;
+
+  MOD(5,1)                                                                      
+----------                                                                      
+         0                                                                      
+
+SQL> select power(5,2) from dual;
+
+POWER(5,2)                                                                      
+----------                                                                      
+        25                                                                      
+
+SQL> select log(101000) from dual;
+select log(101000) from dual
+       *
+ERROR at line 1:
+ORA-00909: invalid number of arguments 
+
+
+SQL>  select log(10,1000) from dual;
+
+LOG(10,1000)                                                                    
+------------                                                                    
+           3                                                                    
+
+SQL> select round(6.8985,2)from dual;
+
+ROUND(6.8985,2)                                                                 
+---------------                                                                 
+            6.9                                                                 
+
+SQL> select trunc(6.8985,0)from dual;
+
+TRUNC(6.8985,0)                                                                 
+---------------                                                                 
+              6                                                                 
+
+SQL> select sqrt(25) from dual;
+
+  SQRT(25)                                                                      
+----------                                                                      
+         5                                                                      
+
+SQL> select lower('PARTH') from dual;
+
+LOWER                                                                           
+-----                                                                           
+parth                                                                           
+
+SQL> select upper('parth') from dual;
+
+UPPER                                                                           
+-----                                                                           
+PARTH                                                                           
+
+SQL> select initcap('parth is     ') from dual;
+
+INITCAP('PART                                                                   
+-------------                                                                   
+Parth Is                                                                        
+
+SQL> 
