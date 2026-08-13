@@ -1,0 +1,181 @@
+select length('parth') from dual;
+
+LENGTH('PARTH')                                                                 
+---------------                                                                 
+              5                                                                 
+
+SQL> select substr('geetangali',5,6)from dual;
+
+SUBSTR                                                                          
+------                                                                          
+angali                                                                          
+
+SQL> select instr('part','p') from dual;
+
+INSTR('PART','P')                                                               
+-----------------                                                               
+                1                                                               
+
+SQL> select replace ('geetanjali','a','x') from dual;
+
+REPLACE('G                                                                      
+----------                                                                      
+geetxnjxli                                                                      
+
+SQL> select rpad('hello','10','*') from dual;
+
+RPAD('HELL                                                                      
+----------                                                                      
+hello*****                                                                      
+
+SQL> select ipad ('hello',10,'*') from dual;
+select ipad ('hello',10,'*') from dual
+       *
+ERROR at line 1:
+ORA-00904: "IPAD": invalid identifier 
+
+
+SQL> select lpad ('hello',10,'*') from dual;
+
+LPAD('HELL                                                                      
+----------                                                                      
+*****hello                                                                      
+
+SQL> select ltrim('     hello') from dual;
+
+LTRIM                                                                           
+-----                                                                           
+hello                                                                           
+
+SQL> select rtrim('hello        ') from dual;
+
+RTRIM                                                                           
+-----                                                                           
+hello                                                                           
+
+SQL> select concat('parth','acharya')from dual;
+
+CONCAT('PART                                                                    
+------------                                                                    
+parthacharya                                                                    
+
+SQL> select count(*) from dual;
+
+  COUNT(*)                                                                      
+----------                                                                      
+         1                                                                      
+
+SQL> select greatest(10,20,15) from dual;
+
+GREATEST(10,20,15)                                                              
+------------------                                                              
+                20                                                              
+
+SQL> select least(10,20,15) from dual;
+
+LEAST(10,20,15)                                                                 
+---------------                                                                 
+             10                                                                 
+
+SQL> select chr('A') from dual;
+select chr('A') from dual
+           *
+ERROR at line 1:
+ORA-01722: invalid number 
+
+
+SQL> select chr('65') from dual;
+
+C                                                                               
+-                                                                               
+A                                                                               
+
+SQL> select ascit('A') from dual;
+select ascit('A') from dual
+       *
+ERROR at line 1:
+ORA-00904: "ASCIT": invalid identifier 
+
+
+SQL> SELECT ASCII('A') FROM dual;
+
+ASCII('A')                                                                      
+----------                                                                      
+        65                                                                      
+
+SQL> select trim('orecal') from dual;
+
+TRIM('                                                                          
+------                                                                          
+orecal                                                                          
+
+SQL> select add_months('12-avg-2026',2) from dual;
+select add_months('12-avg-2026',2) from dual
+                  *
+ERROR at line 1:
+ORA-01843: not a valid month 
+
+
+SQL> SELECT ADD_MONTHS('12-AUG-2026', 2) FROM dual;
+
+ADD_MONTH                                                                       
+---------                                                                       
+12-OCT-26                                                                       
+
+SQL> select last_day('12-ag-2026') from dual;
+select last_day('12-ag-2026') from dual
+                *
+ERROR at line 1:
+ORA-01843: not a valid month 
+
+
+SQL> select last_day('12-aug-2026') from dual;
+
+LAST_DAY(                                                                       
+---------                                                                       
+31-AUG-26                                                                       
+
+SQL> select next_day('12-aug-2026','friday') from dual;
+
+NEXT_DAY(                                                                       
+---------                                                                       
+14-AUG-26                                                                       
+
+SQL> select months_between('12-oct-2026','10-aug-2026
+  2  )
+  3  
+SQL> select months_between('12-oct-2026','10-aug-2026) from dual;
+ERROR:
+ORA-01756: quoted string not properly terminated 
+
+
+SQL> select months_between('12-oct-2026','12-aug-2026) from dual;
+ERROR:
+ORA-01756: quoted string not properly terminated 
+
+
+SQL>  select months_between('12-oct-2026','12-aug-2026') from dual;
+
+MONTHS_BETWEEN('12-OCT-2026','12-AUG-2026')                                     
+-------------------------------------------                                     
+                                          2                                     
+
+SQL> select sysdate from dual;
+
+SYSDATE                                                                         
+---------                                                                       
+13-AUG-26                                                                       
+
+SQL> select systimestamp from dual;
+
+SYSTIMESTAMP                                                                    
+---------------------------------------------------------------------------     
+13-AUG-26 10.04.03.218000 AM +05:30                                             
+
+SQL> select to_date('12-aug-2026','dd-mon-yyyy') from dual;
+
+TO_DATE('                                                                       
+---------                                                                       
+12-AUG-26                                                                       
+
+SQL> 
