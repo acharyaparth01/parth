@@ -28,13 +28,6 @@ RPAD('HELL
 ----------                                                                      
 hello*****                                                                      
 
-SQL> select ipad ('hello',10,'*') from dual;
-select ipad ('hello',10,'*') from dual
-       *
-ERROR at line 1:
-ORA-00904: "IPAD": invalid identifier 
-
-
 SQL> select lpad ('hello',10,'*') from dual;
 
 LPAD('HELL                                                                      
@@ -77,25 +70,11 @@ LEAST(10,20,15)
 ---------------                                                                 
              10                                                                 
 
-SQL> select chr('A') from dual;
-select chr('A') from dual
-           *
-ERROR at line 1:
-ORA-01722: invalid number 
-
-
 SQL> select chr('65') from dual;
 
 C                                                                               
 -                                                                               
 A                                                                               
-
-SQL> select ascit('A') from dual;
-select ascit('A') from dual
-       *
-ERROR at line 1:
-ORA-00904: "ASCIT": invalid identifier 
-
 
 SQL> SELECT ASCII('A') FROM dual;
 
@@ -109,25 +88,11 @@ TRIM('
 ------                                                                          
 orecal                                                                          
 
-SQL> select add_months('12-avg-2026',2) from dual;
-select add_months('12-avg-2026',2) from dual
-                  *
-ERROR at line 1:
-ORA-01843: not a valid month 
-
-
 SQL> SELECT ADD_MONTHS('12-AUG-2026', 2) FROM dual;
 
 ADD_MONTH                                                                       
 ---------                                                                       
 12-OCT-26                                                                       
-
-SQL> select last_day('12-ag-2026') from dual;
-select last_day('12-ag-2026') from dual
-                *
-ERROR at line 1:
-ORA-01843: not a valid month 
-
 
 SQL> select last_day('12-aug-2026') from dual;
 
@@ -140,19 +105,6 @@ SQL> select next_day('12-aug-2026','friday') from dual;
 NEXT_DAY(                                                                       
 ---------                                                                       
 14-AUG-26                                                                       
-
-SQL> select months_between('12-oct-2026','10-aug-2026
-  2  )
-  3  
-SQL> select months_between('12-oct-2026','10-aug-2026) from dual;
-ERROR:
-ORA-01756: quoted string not properly terminated 
-
-
-SQL> select months_between('12-oct-2026','12-aug-2026) from dual;
-ERROR:
-ORA-01756: quoted string not properly terminated 
-
 
 SQL>  select months_between('12-oct-2026','12-aug-2026') from dual;
 
